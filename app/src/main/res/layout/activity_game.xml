@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tree1"
+    tools:context=".GameActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tree1">
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/score"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="score:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+    <Button
+        android:id="@+id/btnpause"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="pauseResume"
+        android:background="@drawable/pause"
+        android:layout_toLeftOf="@id/btnD"/>
+    <Button
+        android:id="@+id/btnrun"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="playResume"
+        android:background="@drawable/play"
+        android:layout_toRightOf="@id/btnD"
+        tools:ignore="DuplicateIds" />
+    <Button
+        android:id="@+id/btnL"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="L"
+        android:onClick="move"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/btnD"/>
+    <Button
+        android:id="@+id/btnU"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="U"
+        android:tag="U"
+        android:onClick="move"
+        android:layout_alignLeft="@id/btnD"
+        android:layout_above="@id/btnD"/>
+    <Button
+        android:id="@+id/btnD"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="D"
+        android:tag="D"
+        android:onClick="move"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btnR"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="R"
+        android:tag="R"
+        android:onClick="move"
+        android:layout_toRightOf="@id/btnD"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>
